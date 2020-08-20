@@ -51,10 +51,10 @@ export default {
     }, //end of postData
 
     onClick() {
-      this.btnState = true
+      this.btnState = false
       if (this.editorContent === '') {
         this.resultContent = ' Please type Object'
-        this.btnState = false
+        this.btnState = true
         return
       }
 
@@ -63,12 +63,12 @@ export default {
       this.postData(this.serverUrl, jsonObj)
         .then((res) => {
           console.log(res)
-          this.btnState = false
+          this.btnState = true
           this.resultContent = res
         })
         .catch((res) => {
           this.resultContent = res
-          this.btnState = false
+          this.btnState = true
         })
     }, //end of onClick
   }, // enf of methods
