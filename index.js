@@ -6,4 +6,4 @@ function playground() {
   return fs.readFileSync(playgroundPath, "utf-8")
 }
 
-module.exports = playground()
+module.exports = playground
