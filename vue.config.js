@@ -9,7 +9,7 @@ module.exports = {
       .plugin('inline-source')
       .use(require('html-webpack-inline-source-plugin'))
     config.plugin('html').tap((args) => {
-      args[0].title = 'JSON-route playground'
+      args[0].title = 'Anfrage | playground'
       args[0].inlineSource = '(.css|.js$)'
       return args
     })

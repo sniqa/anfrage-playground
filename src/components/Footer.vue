@@ -1,13 +1,22 @@
 <template>
   <div class="footer">
-    <span>Create by</span>
-    <a href="https://vuejs.org/" target="_blank">Vue.js</a>
-    <a href="https://codemirror.net/" target="_blank">CodeMirror</a>
+    <button @click="isShow = !isShow">About</button>
+    <about v-show="isShow"></about>
   </div>
 </template>
 
 <script>
-  export default {}
+import  About from './About.vue'
+  export default {
+    data: () => {
+      return {
+        isShow:false
+      }
+    },
+    components:{
+      About
+    }
+  }
 </script>
 
 <style>
@@ -24,10 +33,10 @@
     font-size: 14px;
     margin-right: 10px;
   }
-  .footer span {
-    margin: 0 5px;
-  }
-  .footer a {
-    margin: 0 5px;
-  }
+  button{
+    background: none;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+ } 
 </style>

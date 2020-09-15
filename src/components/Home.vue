@@ -81,7 +81,7 @@
     }, // enf of methods
 
     created() {
-      this.serverUrl = window.location.href
+      this.serverUrl = window.location.href 
     },
   }
 </script>
